@@ -1,7 +1,7 @@
 ---
 description: Critically review and improve documents, arguments, or plans.
-model: gpt-4.5
-tools: []
+model: gpt-5.4
+tools: ["codebase"]
 ---
 
 # Review Mode

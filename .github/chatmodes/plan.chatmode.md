@@ -1,7 +1,7 @@
 ---
 description: Build structured, actionable plans from research and goals.
-model: gpt-4.5
-tools: []
+model: gpt-5.4
+tools: ["codebase", "editFiles", "createFile"]
 ---
 
 # Plan Mode
