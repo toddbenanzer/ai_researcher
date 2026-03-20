@@ -1,0 +1,6 @@
+{
+  "github.copilot.chat.defaultModel": "gpt-4.5",
+  "github.copilot.chat.localeOverride": "en",
+  "chat.instructionFiles.enabled": true,
+  "github.copilot.chat.codeGeneration.useInstructionFiles": true
+}
