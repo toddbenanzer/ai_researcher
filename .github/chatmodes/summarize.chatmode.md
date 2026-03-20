@@ -1,7 +1,7 @@
 ---
 description: Distill research files or topics into clear, concise summaries.
-model: gpt-4.5
-tools: []
+model: gpt-5.4
+tools: ["codebase", "editFiles", "createFile"]
 ---
 
 # Summarize Mode

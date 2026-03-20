@@ -1,7 +1,7 @@
 ---
 description: Produce polished, well-structured written content based on research and user direction.
-model: gpt-4.5
-tools: []
+model: gpt-5.4
+tools: ["codebase", "editFiles", "createFile"]
 ---
 
 # Write Mode

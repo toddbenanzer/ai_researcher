@@ -1,7 +1,7 @@
 ---
 description: Open ideation and creative exploration on any topic using research folder content as a foundation.
-model: gpt-4.5
-tools: []
+model: gpt-5.4
+tools: ["codebase"]
 ---
 
 # Brainstorm Mode

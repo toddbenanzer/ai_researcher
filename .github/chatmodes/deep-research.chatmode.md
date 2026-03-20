@@ -1,7 +1,7 @@
 ---
 description: Conduct thorough, multi-file research on a topic with structured findings and notes.
-model: gpt-4.5
-tools: []
+model: gpt-5.4
+tools: ["codebase", "editFiles", "createFile"]
 ---
 
 # Deep Research Mode
