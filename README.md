@@ -37,6 +37,7 @@ current-project/
 | `/summarize [topic or "all"]` | Summarize research content |
 | `/review [file or topic]` | Critique and review |
 | `/brainstorm [topic]` | Open ideation session |
+| `/gap-prompts [topic]` | Generate M365 Copilot prompts to fill research gaps |
 
 ---
 
@@ -53,6 +54,24 @@ Open a specific mode from the Copilot Chat mode picker:
 | **Review** | Critiquing and improving documents |
 | **Deep Research** | Thorough multi-file research and synthesis |
 | **Draft Output** | Creating specific deliverables (email, deck, summary, etc.) |
+| **Research Gap Prompts** | Identify research gaps and generate M365 Copilot prompts to fill them |
+
+---
+
+## Gathering Additional Research with M365 Copilot
+
+Use **Research Gap Prompts** mode (or `/gap-prompts`) when your research feels incomplete and you want to pull in more information from enterprise sources or the web.
+
+**The workflow:**
+1. Run `/gap-prompts` or switch to **Research Gap Prompts** mode
+2. The tool analyzes your existing research and identifies gaps
+3. It generates ready-to-paste prompts for **Microsoft 365 Copilot**, each labeled with the correct mode:
+   - **🏢 Work Mode** — searches your emails, Teams messages, OneNote, SharePoint, and internal docs
+   - **🌐 Web Mode** — searches the internet for current data, news, and published research
+4. Paste each prompt into [M365 Copilot](https://m365.cloud.microsoft/chat), select the indicated mode, and ask it to format its response as a markdown document
+5. Save the markdown response into `current-project/research/`
+6. Run `/reindex` to update the index
+7. Continue with **Deep Research** or **Summarize** mode to incorporate the new material
 
 ---
 
