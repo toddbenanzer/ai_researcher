@@ -1,8 +1,8 @@
 # AI Researcher — VS Code GitHub Copilot Workspace
 
 A structured research workspace for VS Code GitHub Copilot Chat. Drop your research
-files in, and use powerful chat modes to analyze, synthesize, plan, and produce
-polished outputs.
+files in, use the guided workflow to collect, summarize, and synthesize your research,
+then produce polished outputs in any format.
 
 ---
 
@@ -10,8 +10,32 @@ polished outputs.
 
 1. **Add your research files** to `current-project/research/` (.md or .txt)
 2. **Open Copilot Chat** in VS Code
-3. **Start a session** — the researcher will automatically index your files
-4. **Use slash commands or chat modes** to begin working
+3. **Use Workflow mode** to walk through all stages end-to-end, or pick any individual mode below
+
+---
+
+## Recommended Workflow
+
+The system is designed around four sequential stages. Use **Workflow** mode to be
+guided through all of them, or run each stage independently.
+
+```
+Stage 1: Collect & Index Research
+         Drop .md / .txt files into current-project/research/ and run /reindex
+         ↓
+Stage 2: Suggest Additional Prompts  [optional utility]
+         Use Suggest Prompts mode to identify gaps and generate prompts
+         to run in Microsoft Copilot for M365 (Work Mode or Web Mode)
+         ↓
+Stage 3: Summarize
+         Per-document TL;DRs saved to current-project/working-files/research-summaries.md
+         ↓
+Stage 4: Synthesize
+         One comprehensive unified narrative saved to current-project/output/
+         ↓
+Stage 5: Write Output
+         Produce a deliverable in your chosen format
+```
 
 ---
 
@@ -20,9 +44,31 @@ polished outputs.
 ```
 current-project/
 ├── research/        ← Drop your .md and .txt source files here
-├── working-files/   ← Auto-generated: index, research notes, session log
+├── working-files/   ← Auto-generated: index, research notes, summaries, session log
 └── output/          ← All final deliverables land here
 ```
+
+**Scope:** All modes and commands only read files within `current-project/`.
+Files outside this folder (archive folders, old projects, etc.) are never accessed.
+
+---
+
+## Chat Modes
+
+Open a mode from the Copilot Chat mode picker:
+
+| Mode | What it does |
+|---|---|
+| **Workflow** | Guided end-to-end walkthrough of all four stages |
+| **Suggest Prompts** | Reads existing research and generates up to 5 prompts to run in Microsoft Copilot for M365 (labeled Work Mode or Web Mode) |
+| **Summarize** | Per-document TL;DRs — what does each file say? |
+| **Synthesize** | One comprehensive unified narrative across all research |
+| **Draft Output** | Produce a specific formatted deliverable |
+| **Write** | Polished written content with full format menu |
+| **Deep Research** | Thorough multi-file research analysis with structured report |
+| **Plan** | Build structured, actionable plans |
+| **Brainstorm** | Ideation and angle exploration |
+| **Review** | Critique and improve documents |
 
 ---
 
@@ -31,45 +77,50 @@ current-project/
 | Command | What it does |
 |---|---|
 | `/reindex` | Rebuild the research index from scratch |
-| `/research [topic]` | Deep research task |
-| `/draft [type] [topic]` | Produce a formatted deliverable |
-| `/plan [goal]` | Build a structured plan |
+| `/suggest-prompts` | Generate M365 Copilot prompts based on research gaps |
 | `/summarize [topic or "all"]` | Summarize research content |
+| `/synthesize` | Create a comprehensive unified research narrative |
+| `/draft [type] [topic]` | Produce a formatted deliverable |
+| `/research [topic]` | Deep research task |
+| `/plan [goal]` | Build a structured plan |
 | `/review [file or topic]` | Critique and review |
 | `/brainstorm [topic]` | Open ideation session |
 
 ---
 
-## Chat Modes
+## Output Types
 
-Open a specific mode from the Copilot Chat mode picker:
+All outputs save to `current-project/output/` with naming `YYYY-MM-DD-[type]-[topic].md`.
 
-| Mode | Best for |
+| Format | Best for |
 |---|---|
-| **Brainstorm** | Generating ideas and exploring angles |
-| **Write** | Producing polished written content |
-| **Summarize** | Condensing research into clear summaries |
-| **Plan** | Building structured, actionable plans |
-| **Review** | Critiquing and improving documents |
-| **Deep Research** | Thorough multi-file research and synthesis |
-| **Draft Output** | Creating specific deliverables (email, deck, summary, etc.) |
+| Email Draft | Stakeholder communications |
+| Deck Slide Content | PowerPoint / Google Slides (maps 1:1 to slides) |
+| Executive Summary | Senior audience, max 1 page |
+| Markdown Document | Shareable peer-ready docs (Confluence, Notion, etc.) |
+| Word Document Outline | Structured outline to paste into Word and author |
+| Bullet Point Brief | Quick-consumption briefs |
+| Excel Agent Prompt | Copy-paste prompt for Microsoft Excel agent mode |
 
 ---
 
-## Output Types (Draft Output Mode)
+## Suggest Prompts — Microsoft Copilot for M365
 
-- Email Draft
-- Markdown Doc (shareable/peer-ready)
-- Deck Slide Content (markdown formatted for PowerPoint/Slides)
-- Executive Summary
-- Bullet Point Brief
+The **Suggest Prompts** mode generates prompts you copy and paste into
+[copilot.microsoft.com](https://copilot.microsoft.com). Each prompt is labeled:
+
+- **[Work Mode]** — searches your documents, emails, Teams messages, and SharePoint
+- **[Web Mode]** — searches the public web
+
+Can be used before you have any research (generates starter prompts) or after
+collecting research (identifies gaps and generates targeted follow-up prompts).
 
 ---
 
 ## Knowledge Boundaries
 
-The researcher prioritizes your research folder content. If it supplements with
-general knowledge, it will flag it explicitly with `[General Knowledge]`.
+All modes prioritize files in `current-project/research/`. If a mode supplements
+with general knowledge, it flags it explicitly: `[General Knowledge]`.
 
 ---
 
