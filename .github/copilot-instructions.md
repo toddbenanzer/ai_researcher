@@ -21,10 +21,16 @@ polished, professional outputs.
 
 ## Project Folder Convention
 
-All work is scoped to `current-project/`:
+All work is strictly scoped to `current-project/`. Do not read, reference, or access
+files from any other folder in this repository (e.g., archive folders, old project folders,
+or any directory outside `current-project/`).
+
 - `current-project/research/` — source research files (.md and .txt only)
 - `current-project/working-files/` — intermediate notes, research-notes.md, session-log.md
 - `current-project/output/` — all final deliverables
+
+**Scope rule:** If a file is not inside `current-project/`, do not open it, read it,
+or include it in any task. This applies to all modes and commands without exception.
 
 ## Output File Naming
 
@@ -70,3 +76,5 @@ Each entry in `current-project/working-files/research-index.md` must include:
 - **Deck Slide Content** — one H2 per slide; 3–5 bullets max 12 words each; optional italic Speaker Notes
 - **Executive Summary** — max 400 words; sections: Situation / Key Findings / Implications / Recommended Actions
 - **Bullet Point Brief** — title line; 5–10 bullets max 20 words each; optional one-sentence context header
+- **Word Document Outline** — structured H1/H2/H3 outline with section descriptions, ready to paste into Word
+- **Excel Agent Prompt** — a complete, copy-paste-ready prompt for Microsoft Excel agent mode to generate a spreadsheet

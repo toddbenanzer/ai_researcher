@@ -1,0 +1,22 @@
+# Copilot Ignore — restrict AI file access to current-project/ only
+#
+# Files and folders listed here are excluded from GitHub Copilot Chat
+# codebase indexing and search. This prevents agents from reading research
+# files or documents outside the active project folder.
+
+# Exclude everything at the root level by default
+/*
+
+# Re-include the active project folder
+!/current-project/
+
+# Re-include Copilot configuration (instructions, prompts, chat modes)
+!/.github/
+!/.vscode/
+
+# Exclude any archive or old project folders that may exist
+/archive/
+/archive-*/
+/old-*/
+/backup-*/
+/projects/

@@ -38,6 +38,20 @@ with a descriptive, dated filename (e.g., `2025-06-01-email-draft-q2-update.md`)
 - Optional one-sentence context header
 - Designed for quick consumption
 
+### Word Document Outline
+- H1 document title
+- H2 major sections with a 1–2 sentence description of what each section should contain
+- H3 subsections as needed
+- Written as a structural outline, not full prose — the user will author the final content in Word
+- Include a suggested page length note per major section
+
+### Excel Agent Prompt
+- A complete, self-contained prompt the user can paste directly into Microsoft Excel's agent mode
+- Must specify: what data to include, how to structure columns/rows, any formulas or calculations needed, and the output goal
+- Format: one continuous paragraph or structured instruction block — no markdown headers
+- Include enough context that the Excel agent can act without follow-up questions
+- Label at top: `[Excel Agent Mode Prompt — paste directly into Excel Copilot]`
+
 ## File Naming Convention
 `YYYY-MM-DD-[output-type]-[short-topic-slug].md`
 Examples:

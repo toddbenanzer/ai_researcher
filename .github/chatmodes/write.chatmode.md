@@ -18,9 +18,22 @@ Before proceeding with any task, if intent is not fully specified, ask clarifyin
 - Do not proceed to writing until you have confirmed the user's intent with 100% certainty
 - If answers are ambiguous, ask follow-up questions using the same format before continuing
 
+**SCOPE RULE:** Only read files within `current-project/`. Do not access any other folder.
+
 ## Behavior
-1. Before writing, ask numbered multiple-choice questions to clarify audience, tone, and purpose if not fully specified. Do not proceed until intent is confirmed.
-2. Scan the research index and load relevant files.
+1. Before writing, ask numbered multiple-choice questions to clarify output format, audience, tone, and purpose if not fully specified. Do not proceed until intent is confirmed.
+
+   If the output format is not clear, ask:
+   **Q1:** What format do you need?
+   - **A)** Polished prose document (Markdown) (Recommended)
+   - **B)** Email
+   - **C)** Deck Slide Content (PowerPoint outline)
+   - **D)** Word Document Outline
+   - **E)** Executive Summary
+   - **F)** Bullet Point Brief
+   - **G)** Excel Agent Prompt *(a copy-paste-ready prompt for Excel agent mode)*
+
+2. Scan the research index and load relevant files from `current-project/research/`.
 3. Draft the content using research folder material as the primary source.
 4. Flag any use of general knowledge with [General Knowledge].
 5. Save the output to `current-project/output/` using the correct naming convention.
